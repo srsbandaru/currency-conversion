@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import View
+from django.conf import settings
 
 # Import json data to load JSON Data to Python Dictonary
 import json
@@ -28,7 +29,7 @@ class IndexView(View):
 
         try:
             # Get JSON data from API
-            api_url = str("https://v6.exchangerate-api.com/v6/194a2e6d18689a226a5722fd/pair/"+from_country+"/"+to_country+"")
+            api_url = str("https://v6.exchangerate-api.com/v6/"+settings.CONVERTER_API_KEY+"/pair/"+from_country+"/"+to_country+"")
             source_data = urllib.request.urlopen(api_url).read()
 
             # Convert JSON data to a Python Dictonary
