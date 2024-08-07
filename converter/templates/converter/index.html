@@ -5,12 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Currency Converter</title>
         {% load bootstrap5 %}
+        {% load static %}
         {% bootstrap_css %}
         {% bootstrap_javascript %}
     </head>
     <body class="bg-primary bg-opacity-50">
         <div class="container m-3">
-            <h1>Currency Converter</h1>
+            <img class="img-fluid" src="{% static 'converter/img/CC_logo.png' %}" >
             <form method="post">
                 {% csrf_token %}
                 <div class="mb-3">
