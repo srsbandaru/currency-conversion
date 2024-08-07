@@ -6,12 +6,13 @@
         <title>Currency Converter</title>
         {% load bootstrap5 %}
         {% load static %}
+        <link rel="icon" type="image/png" href="{% static 'converter/img/cc-icon.png' %}">
         {% bootstrap_css %}
         {% bootstrap_javascript %}
     </head>
     <body class="bg-primary bg-opacity-50">
         <div class="container m-3">
-            <img class="img-fluid" src="{% static 'converter/img/CC_logo.png' %}" >
+            <img class="img-fluid" src="{% static 'converter/img/CC_Logo.png' %}" >
             <form method="post">
                 {% csrf_token %}
                 <div class="mb-3">
